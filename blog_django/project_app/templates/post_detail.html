@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="post">
+        <div class="date">
+            {{ post.created_at}}
+        </div>
+        <h1>{{ post.title }}</h1>
+        <h3>{{ post.author.username }}</h3>
+        <p>{{post.text}}</p>
+    </div>
+<style>
+        .post {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+
+{%endblock%}

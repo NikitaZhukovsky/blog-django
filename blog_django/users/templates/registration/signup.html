@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Register</h2>
+
+    <div class="register-form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <style>
+        .register-form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+{% endblock %}
